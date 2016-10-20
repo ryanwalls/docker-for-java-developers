@@ -1,0 +1,10 @@
+FROM metahelicase/gradle:2.14.1
+
+COPY . /app
+WORKDIR /app
+
+RUN gradle test
+RUN gradle build
+
+ENTRYPOINT []
+CMD ["java", "-jar", "build/libs/docker-for-java-developers-0.1.0.jar"]
