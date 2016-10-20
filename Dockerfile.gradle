@@ -7,4 +7,7 @@ RUN gradle test
 RUN gradle build
 
 ENTRYPOINT []
+
+EXPOSE 8080
+
 CMD ["java", "-jar", "build/libs/docker-for-java-developers-0.1.0.jar"]
