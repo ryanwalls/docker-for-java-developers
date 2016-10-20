@@ -7,3 +7,27 @@ Slides: https://slides.com/ryanwalls/docker-for-java-developers-from-0-to-docker
 
 ## Before talk starts
 * Install Docker for Mac (https://docs.docker.com/engine/installation/mac/), Windows (https://docs.docker.com/engine/installation/windows/) or Linux (https://docs.docker.com/engine/installation/linux/).
+
+
+## Dockerizing your app
+### Gradle example
+Build:
+```
+docker build -t "gradletest" -f Dockerfile.gradle  .
+```
+
+Run:
+```
+docker run -it -p 8080:8080 gradletest
+```
+
+### Maven example
+Build:
+```
+docker build -t "maventest" -f Dockerfile.maven  .
+```
+
+Run:
+```
+docker run -it -p 8080:8080 maventest
+```

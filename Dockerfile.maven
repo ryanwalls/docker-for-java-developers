@@ -1,0 +1,7 @@
+FROM maven:3.3-jdk-8-onbuild-alpine
+
+RUN mvn test
+
+EXPOSE 8080
+
+CMD ["java", "-jar", "target/docker-for-java-developers-0.1.0.jar"]
